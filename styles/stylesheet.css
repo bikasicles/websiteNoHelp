@@ -1,0 +1,36 @@
+body {
+    font-family: 'inconsolata', monospace;
+    font-size: 1.2em;
+    background-color: #a52a2a;
+    border: 2px solid #2aa5a5;
+    padding: 100px;
+    margin: 100px 300px;
+}
+h1 {
+    background-color: #2aa5a5;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+h2 {
+    background-color: #2aa5a5;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+h3 {
+    text-decoration: underline;
+}
+p {
+    color: #ffffff;
+    text-align: left;
+    padding: 10vw;
+}
+img {
+    height: 30vh;
+    width: 30vw;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
