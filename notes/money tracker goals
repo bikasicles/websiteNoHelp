@@ -1,0 +1,96 @@
+This page should have its own tab.
+
+I need this page to track my different jobs
+1. Barback
+2. Serving
+3. Juicing
+I also need this page to track paychecks
+
+The flow
+1. Select date
+2. Select job / type
+   1. Barback
+   2. Serving
+   3. Juicing
+   4. Paycheck
+3. Select time / place
+   1. Barback
+      1. am
+      2. pm
+   2. Serving
+      1. main well
+         1. am
+         2. pm
+      2. Up well
+         1. am
+         2. pm
+   3. Paycheck
+      1. pay period
+      2. pay date
+4. Info tracking
+   1. Barback
+      1. Tips $
+      2. Hours 00.00
+   2. Serving
+      1. Tips $
+      2. Tips claimed $
+      3. Hours 00.00
+   3. Juicing
+      1. Hours 00.00
+   4. paycheck
+      1. Gross ammount $
+         1. Barback $
+         2. Serving $
+         3. Juicing $
+         4. Tips $
+      2. Net pay $
+         1. adjustments 
+            1. house account -$
+            2. parking -$
+
+based on the information i give i want to be able to 
+1. get an average for my jobs / checks
+   1. payout
+   2. hours
+2. get a month the month estimate
+   1. previous months should have the total ammount i made
+   2. future should have an estimate on how much i should make based on previous years and previous month.
+
+We will start with this and go from there.
+
+Data Storage: Since this is a static HTML website, where should the data be stored? Should I:
+
+Use JavaScript with localStorage (saves data in your browser only)?
+Build it so you can later add a database?
+Just create the form structure for now and we can add storage later?
+
+Data Storage: Lets later add a database.I am unfamiliar with database so we will need to do some work together later.
+Juicing tracking: Juicing is a position i can do at anytime without it affecting the money. this job i do not make tips it is a static ammount.
+Paycheck Adjustments: House account and parking tend to always be there but we can add a custom adjustments selection as well.
+Date Selection: it should start with todays date but give the option for past. future is irrelivent due to the fact i haven't worked those shifts yet.
+Average Calculations: Lets do all of the above but allow me to select which one i would like to view.
+Month estimate display: this should be a separate page within the tab. I want to use this whole website with multible things so it should be under money tracker and have options for adding info and view info.
+
+Juicing tracking: I noticed "Juicing" appears in your job list (#3) but doesn't have a time/place option in section 3. Should it have time/place options like:
+
+Juicing
+am
+pm
+Or something else?
+Paycheck adjustments: You mentioned "house account" and "parking" as negative adjustments. Are there any other common adjustments I should include, or should there be an option to add custom adjustments?
+
+Date selection: Should the date picker allow:
+
+Any date (past, present, future)?
+Just past dates?
+Average calculations: When you say "get an average," should it calculate:
+
+Average per shift (tips/hours per individual shift)?
+Average per week?
+Average per month?
+All of the above?
+Month estimate display: Should this be:
+
+A separate section/page?
+Displayed on the same page as the entry form?
+A dashboard view?

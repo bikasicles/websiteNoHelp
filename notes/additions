@@ -1,0 +1,9 @@
+I want to add an hourly rate to each job
+1. Barback - $8
+2. Serving - $2.13
+3. Juicing - $12
+
+This way for example 
+    if i were to add an entry for juicing i can add my hours and itll calculate how much i made off of that shift based on hours.
+    if i were to add an entry for serving i can add my hours and tips and itll calculate my new hourly and pay based on hours + tips
+        same goes for barbacking.

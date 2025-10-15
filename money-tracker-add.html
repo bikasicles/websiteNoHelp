@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Entry - Money Tracker</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/money-tracker.css">
+</head>
+<body>
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+        <a href="index.html" class="tab">Home</a>
+        <a href="#about" class="tab">About</a>
+        <a href="#todo" class="tab">To Do</a>
+        <a href="#progress" class="tab">Progress</a>
+        <a href="Money Tracker.html" class="tab active">Money Tracker</a>
+    </nav>
+    
+    <div class="sub-nav">
+        <a href="Money Tracker.html">← Back to Money Tracker</a>
+        <a href="money-tracker-view.html">View Stats →</a>
+    </div>
+    
+    <h1>Add Entry</h1>
+    
+    <form id="entry-form" class="tracker-form">
+        <!-- Step 1: Date -->
+        <div class="form-section">
+            <label for="entry-date">Date:</label>
+            <input type="date" id="entry-date" name="date" required>
+        </div>
+        
+        <!-- Step 2: Job Type -->
+        <div class="form-section">
+            <label for="job-type">Job / Type:</label>
+            <select id="job-type" name="jobType" required>
+                <option value="">-- Select Job Type --</option>
+                <option value="barback">Barback</option>
+                <option value="serving">Serving</option>
+                <option value="juicing">Juicing</option>
+                <option value="paycheck">Paycheck</option>
+            </select>
+        </div>
+        
+        <!-- Step 3: Time/Place (Dynamic based on job type) -->
+        <div id="time-place-section" class="form-section" style="display: none;">
+            <!-- Barback Options -->
+            <div id="barback-options" class="job-options" style="display: none;">
+                <label>Shift:</label>
+                <select id="barback-shift" name="shift">
+                    <option value="am">AM</option>
+                    <option value="pm">PM</option>
+                </select>
+            </div>
+            
+            <!-- Serving Options -->
+            <div id="serving-options" class="job-options" style="display: none;">
+                <label>Location:</label>
+                <select id="serving-location" name="location">
+                    <option value="main-well-am">Main Well - AM</option>
+                    <option value="main-well-pm">Main Well - PM</option>
+                    <option value="up-well-am">Up Well - AM</option>
+                    <option value="up-well-pm">Up Well - PM</option>
+                </select>
+            </div>
+            
+            <!-- Paycheck Options -->
+            <div id="paycheck-options" class="job-options" style="display: none;">
+                <label for="pay-period">Pay Period (MM/DD-MM/DD):</label>
+                <input type="text" id="pay-period" name="payPeriod" placeholder="10/01-10/15" maxlength="11">
+                
+                <label for="pay-date">Pay Date:</label>
+                <input type="date" id="pay-date" name="payDate">
+            </div>
+        </div>
+        
+        <!-- Step 4: Info Tracking (Dynamic based on job type) -->
+        <div id="info-tracking-section" class="form-section" style="display: none;">
+            <!-- Barback Info -->
+            <div id="barback-info" class="job-info" style="display: none;">
+                <h3>Barback Details</h3>
+                <p style="color: #2aa5a5; font-style: italic;">Base Rate: $8.00/hr</p>
+                
+                <label for="barback-tips">Tips ($):</label>
+                <input type="number" id="barback-tips" name="tips" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="barback-hours">Hours:</label>
+                <input type="number" id="barback-hours" name="hours" step="0.01" min="0" placeholder="0.00">
+            </div>
+            
+            <!-- Serving Info -->
+            <div id="serving-info" class="job-info" style="display: none;">
+                <h3>Serving Details</h3>
+                <p style="color: #2aa5a5; font-style: italic;">Base Rate: $2.13/hr</p>
+                
+                <label for="serving-tips">Tips ($):</label>
+                <input type="number" id="serving-tips" name="tips" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="serving-claimed">Tips Claimed ($):</label>
+                <input type="number" id="serving-claimed" name="tipsClaimed" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="serving-hours">Hours:</label>
+                <input type="number" id="serving-hours" name="hours" step="0.01" min="0" placeholder="0.00">
+            </div>
+            
+            <!-- Juicing Info -->
+            <div id="juicing-info" class="job-info" style="display: none;">
+                <h3>Juicing Details</h3>
+                <p style="color: #2aa5a5; font-style: italic;">Rate: $12.00/hr (no tips)</p>
+                
+                <label for="juicing-hours">Hours:</label>
+                <input type="number" id="juicing-hours" name="hours" step="0.01" min="0" placeholder="0.00">
+            </div>
+            
+            <!-- Paycheck Info -->
+            <div id="paycheck-info" class="job-info" style="display: none;">
+                <h3>Paycheck Details</h3>
+                
+                <h4>Gross Amount ($)</h4>
+                <label for="gross-barback">Barback:</label>
+                <input type="number" id="gross-barback" name="grossBarback" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="gross-barback-hours">Barback Hours:</label>
+                <input type="number" id="gross-barback-hours" name="grossBarbackHours" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="gross-serving">Serving:</label>
+                <input type="number" id="gross-serving" name="grossServing" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="gross-serving-hours">Serving Hours:</label>
+                <input type="number" id="gross-serving-hours" name="grossServingHours" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="gross-juicing">Juicing:</label>
+                <input type="number" id="gross-juicing" name="grossJuicing" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="gross-juicing-hours">Juicing Hours:</label>
+                <input type="number" id="gross-juicing-hours" name="grossJuicingHours" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="gross-tips">Tips:</label>
+                <input type="number" id="gross-tips" name="grossTips" step="0.01" min="0" placeholder="0.00">
+                
+                <h4>Adjustments (-)</h4>
+                <label for="house-account">House Account:</label>
+                <input type="number" id="house-account" name="houseAccount" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="parking">Parking:</label>
+                <input type="number" id="parking" name="parking" step="0.01" min="0" placeholder="0.00">
+                
+                <label for="tips-ded">Tips Ded:</label>
+                <input type="number" id="tips-ded" name="tipsDed" step="0.01" min="0" placeholder="0.00">
+                
+                <div id="custom-adjustments-container"></div>
+                
+                <button type="button" id="add-adjustment-btn" class="button" style="margin: 10px 0;">+ Add Custom Adjustment</button>
+                
+                <h4>Net Pay</h4>
+                <label for="net-pay">Net Pay ($):</label>
+                <input type="number" id="net-pay" name="netPay" step="0.01" min="0" placeholder="0.00">
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <button type="submit" class="submit-btn">Save Entry</button>
+            <button type="reset" class="reset-btn">Clear Form</button>
+        </div>
+    </form>
+    
+    <div id="success-message" class="success-message" style="display: none;">
+        Entry saved successfully!
+    </div>
+    
+    <script src="scripts/money-tracker.js"></script>
+</body>
+</html>

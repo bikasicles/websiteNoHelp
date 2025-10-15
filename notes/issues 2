@@ -1,0 +1,8 @@
+Thank you this works great!
+issues:
+1. for the calculations
+   1. view: all jobs
+      1. this should exclude paychecks as the paychecks are based on the jobs
+2. showing the list of data entries
+   1. i want to be able to select what job to view
+      1. same way we can view for the calculations.

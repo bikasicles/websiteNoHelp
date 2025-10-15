@@ -6,16 +6,46 @@ body {
     padding: 100px;
     margin: 100px 300px;
 }
+
+/* Navigation Tabs */
+.tabs {
+    background-color: #2aa5a5;
+    overflow: hidden;
+    border-bottom: 3px solid #ffffff;
+    margin: -100px -100px 20px -100px;
+    padding: 0;
+}
+
+.tab {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #1f8080;
+}
+
+.tab.active {
+    background-color: #ffffff;
+    color: #2aa5a5;
+    font-weight: bold;
+}
 h1 {
     background-color: #2aa5a5;
     color: #ffffff;
-    padding: 20px;
+    padding: 20px 20px 0 0 ;
     text-align: center;
 }
 h2 {
     background-color: #2aa5a5;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 10vw 0;
     text-align: center;
 }
 h3 {
@@ -24,7 +54,7 @@ h3 {
 p {
     color: #ffffff;
     text-align: left;
-    padding: 10vw;
+    padding: 10vw 10vw 0 ;
 }
 img {
     height: 30vh;

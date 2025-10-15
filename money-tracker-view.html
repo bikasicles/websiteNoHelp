@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Stats - Money Tracker</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/money-tracker.css">
+</head>
+<body>
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+        <a href="index.html" class="tab">Home</a>
+        <a href="#about" class="tab">About</a>
+        <a href="#todo" class="tab">To Do</a>
+        <a href="#progress" class="tab">Progress</a>
+        <a href="Money Tracker.html" class="tab active">Money Tracker</a>
+    </nav>
+    
+    <div class="sub-nav">
+        <a href="Money Tracker.html">← Back to Money Tracker</a>
+        <a href="money-tracker-add.html">Add Entry →</a>
+    </div>
+    
+    <h1>View Stats</h1>
+    
+    <div class="stats-controls">
+        <label for="view-type">View:</label>
+        <select id="view-type">
+            <option value="all">All Jobs</option>
+            <option value="barback">Barback Only</option>
+            <option value="serving">Serving Only</option>
+            <option value="juicing">Juicing Only</option>
+            <option value="paycheck">Paychecks Only</option>
+        </select>
+        
+        <label for="average-type">Average By:</label>
+        <select id="average-type">
+            <option value="shift">Per Shift</option>
+            <option value="week">Per Week</option>
+            <option value="month">Per Month</option>
+        </select>
+        
+        <button id="calculate-btn" class="button">Calculate</button>
+    </div>
+    
+    <div id="stats-display" class="stats-display">
+        <div class="stat-card">
+            <h3>Averages</h3>
+            <div id="averages-content">
+                <p>Click "Calculate" to see averages</p>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <h3>Monthly Summary</h3>
+            <div id="monthly-content">
+                <p>Select a time period and click "Calculate"</p>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <h3>Estimates</h3>
+            <div id="estimates-content">
+                <p>Future estimates based on your history</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="recent-entries">
+        <h2>Recent Entries</h2>
+        <div style="display: flex; gap: 15px; align-items: center; margin: 15px 0;">
+            <label for="entries-filter" style="color: #ffffff; font-weight: bold;">Filter by Job:</label>
+            <select id="entries-filter">
+                <option value="all">All Entries</option>
+                <option value="barback">Barback Only</option>
+                <option value="serving">Serving Only</option>
+                <option value="juicing">Juicing Only</option>
+                <option value="paycheck">Paychecks Only</option>
+            </select>
+            <button id="delete-all-btn" class="danger-btn">Delete All Data</button>
+        </div>
+        <div id="entries-list"></div>
+    </div>
+    
+    <script src="scripts/money-tracker-view.js"></script>
+</body>
+</html>

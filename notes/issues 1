@@ -1,0 +1,13 @@
+This works great
+issues
+1. when adding a paycheck:
+    1. payperiod
+        i want this to automatically have the format of 00/00-00/00
+    2. adjustments
+        lets add a standard adjustment titled "Tips Ded"
+        instead of always having the option to add an additional adjustment, lets have a button to "Add Adjustment"
+    3. lets add hours for each job
+2. calculations
+    1. for paychecks it does not calculate my tips
+    2. does not calculate my hours yet displays. (im aware we dont have a way to track that from the paychecks yet)
+    
